@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stroke Prediction</title>
+<link rel="icon" href="../static/images/LogoTitle.jpg" type="icon">
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="Stroke rate, health, health care, machine learning, Stroke Prediction, Brain, Encephelon" name="keywords" />
+<meta
+    content="Many diseases and disorders can be predicted with a persons 
+    life history to a certain extent. If one has a high sugar consumption, they might develop diabetes.
+     If one is carrying heavy things everyday, then they might experience back pain. Similarly, to predict stroke we
+      need some factors that have a significant contribution to the development of stroke." name="description" />
+</head>
+<header>
+    <link href='https://fonts.googleapis.com/css?family=Emblema One' rel='stylesheet'>
+    <style>
+     .h1{
+         font-family: 'Emblema One';font-size:40px;
+     }   
+     .body {
+    font-family: 'Emblema One';font-size: 20px;
+    }
+
+    .nav {
+        width:fit-content;
+        height:fit-content;
+        background-color:#F7CB2D;
+        font-size: x-large;
+        color: white;
+        text-align:left ;
+        margin: 10px 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        place-items: center;
+    }
+    .topnav {
+  overflow: auto;
+  background-color: #333;
+  width:fit-content;
+  height:fit-content;
+        }
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.747);
+}
+
+.topnav a.active {
+  background-color:#F7CB2D;
+  color: white;
+}
+.topnav .icon {
+    display:none;
+}</style>
+    <div class="topnav">
+        <a name="MENU"></a>
+        <a class="active" href="#home">Home</a>
+        <a href="#strokeform">Predictor</a>
+        <a href="#about">About</a>
+        <a href="#Feedback">Feedback</a>
+      </div>
+ <style>
+    .elementor-widget-container {
+        background-image:url("../static/images/brushStrokeYellow.jpg");
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
+        font-size:40px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'Steelfish Rg', 'helvetica neue',
+                    helvetica, arial, sans-serif;
+        font-weight: 800;
+        -webkit-font-smoothing: antialiased;
+    }
+ </style>
+    <div class="elementor-widget-container">
+        
+        <h1 class="elementor-heading-title elementor-size-default" style="text-align:center;font-size:80; background-color:transparent;color:#F7CB2D">
+            STROKE RISK PREDICTOR</h1>
+        </div>
+    <section> <a name="home"></a></section>
+    <h1 style="position: relative;background-color:transparent;color: white;">WHAT IS A STROKE?</h1>
+    <div class="nav">
+        <a href="#strokeform">Click Here To Predict your Stroke rate!</a>
+    </div>
+    <h2 style="background-color:transparent;color: white;">Here is all you need to know!</h2>
+</header>
+<body style="background-color:#0D659D; font-family: Georgia, 'Times New Roman', Times, serif">
+    <p style="background-color:#2E8BC0; font-size: 18px;"><strong>Stroke is a medical disorder in which the blood arteries in the brain are ruptured, 
+        causing damage to the brain. When the supply of blood and other nutrients to the brain is interrupted, symptoms might 
+        develop. According to the World Health Organization (WHO), stroke is the greatest cause of death
+        and disability globally. Early recognition of the various warning signs of a stroke can help 
+        reduce the severity of the stroke.
+        <div class="container" id="gif1">
+             
+            <img id="gif" src="../static/images/deepBrainBleed.gif"  alt="animations by CleevelandClinic" ALIGN="center" style="float:left;width:70%;height:40%">
+             
+        </div>
+   </strong></p>
+<h1 style="background-color:transparent; color: white;">WHY DOES A STROKE AFFECT DIFFERENT PARTS OF THE BODY?</h1>
+<p style="background-color: #2E8BC0;font-size: 18px;"><strong>Nerve cells in the brain tissue communicate with other cells to control functions including memory, speech 
+    and movement. When a stroke occurs, nerve cells in the brain tissue become injured. As a result of this injury,
+     nerve cells cannot communicate with other cells, and functions are impaired.
+      If a stroke occurs on the right side of the brain, the left side of the body is affected, and vice versa.
+</strong></p>
+<h1 style="background-color:transparent; color: white;">DIAGNOSING A STROKE</h1>
+<p style="background-color: #2E8BC0;font-size: 18px;"><strong>If your doctor suspects you're experiencing a stroke, they'll do tests to assist them figure out what's wrong. Certain tests can also be used to detect the type of stroke.
+First, your doctor will do a physical examination. They'll put your mental acuity, coordination, and balance to test.
+ They'll be looking for:
+ <style>
+    ul {
+      border-style:solid;background-color:#F7CB2D; width: fit-content ;
+    }
+    form{
+        border-style: dashed;background-color:#F7CB2D;width: fit-content;
+    }
+ 
+    </style>
+ 
+    <ul>
+        <li>Tingling or numbness in your face, arms, or legs</li>
+        <li>Signs of confusion</li>
+        <li>Speaking Difficulties</li> 
+        <li>Sudden Vision Impairment</li>
+    </ul>
+    </strong></p>
+    <img src="../static/images/image3FAST.jpg" alt="F.A.S.T-stroke signs" ALIGN="RIGHT" style="width:30%;height:30%;">
+    <h1 style="background-color:transparent;color: white;">ACTING F.A.S.T IS IMPORTANT FOR STROKE</h1>
+  
+    <p style="background-color: #2E8BC0;font-size: 18px; float:inline-start;"><strong>Acting F.A.S.T. can assist stroke patients in receiving the care they require. The most<br> effective stroke treatments are only possible if the stroke is noticed and 
+        diagnosed within three hours of the onset of symptoms. <br>Stroke patients may be ineligible if they do not arrive at 
+        the hospital on time.</strong> </p>
+        <p style="color: white;"><strong>If you suspect someone is having a stroke, react quickly and perform the following F.A.S.T test-</strong></p>
+        <ul style="list-style-type:square;"><strong>
+              <li>F—Face: Ask the person to smile. Does one side of the face droop?</li>
+                <li>A—Arms: Ask the person to raise both arms. Does one arm drift downward?</li>
+            
+            <li>S—Speech: Ask the person to repeat a simple phrase. Is the speech slurred or strange?</li>
+            
+            <li>T—Time: If you see any of these signs, call emergency number right away.</li>
+            </strong>
+            </ul>
+          
+            
+            <p style="font-size: 18px;"><strong>Note the time when any symptoms first appear. This information helps health care providers determine the best treatment for 
+            each person. Do not drive to the hospital or let someone else drive you. 
+            Call an ambulance so that medical personnel can begin life-saving treatment on the way to the emergency room.</strong></p>
+            <style>
+                #gif1{
+                    Width:100%;
+                    }
+                    
+                #gif{
+                    margin-left:auto;
+                    margin-right:auto;
+                    float :none;
+                    }
+            </style>
+            
+            <div class="container" id="gif1">
+             
+            <img id="gif" src="../static/images/strokegif1.gif" alt="animations by makeagif" ALIGN="center" style="width:40%;height:10%">
+             
+            </div>
+            <img src="../static/images/image1MAXpixel.png" alt="Brain Inflammation-image from MAX PIXEL" style="float:right;width:50%;height:50%;">
+            <h1 style="background-color:transparent;color: white;">SUPPLYING THE BRAIN WITH BLOOD</h1>
+        
+                 <p style="color: white;font-size: 18px;"><strong>The brain is
+                    pumped with blood by two pairs of major arteries:</strong></p>
+                 <ul style="list-style-type:square;"><strong>
+                       <li>Internal carotid arteries that transport blood from the heart to the front of the neck.</li>
+                         <li>The vertebral arteries that deliver blood from the heart to the back of the neck.</li>
+                 </strong>
+                 </ul>        
+                             
+
+            <section>
+        <a name="strokeform"></a>
+    </section>
+<h1 style="background-color:transparent;width: fit-content;color: white;">Do you know your stroke risk? </h1>
+</div>
+    <h3>We are here to help you assess the risk of stroke you might have in the next 5 years.
+    Please fill the following to predict the chances of you having a stroke.</h3>
+<form action="/result" method="POST">
+    <h4>Choose your gender</h4>
+    <input type="radio" class="radio" id="gender" name="gender" value="0">
+    <label for="gender1" >Male</label><br>
+    <input type="radio" class="radio" id="gender" name="gender" value="1">
+    <label for="gender2">Female</label><br>
+    <h4>Enter your age</h4>
+    <input type="text" id="age" name="age" required minlength="2" maxlength="3">
+    <h4>Do you have hypertension/high blood pressure?</h4>
+    <input type="radio" id="bp" name="bp" value="1">
+    <label for="bp">Yes</label>
+    <input type="radio" id="bp1" name="bp" value="0">
+    <label for="bp1">No</label><br>
+    <h4>Do you have a history of heart diseases?</h4>
+    <input type="radio" id="heart1" name="heart" value="1">
+    <label for="heart1">Yes</label>
+    <input type="radio" id="heart2" name="heart" value="0">
+    <label for="heart2">No</label><br>
+    <h4>Are you married?</h4>
+    <input type="radio" id="married1" name="married" value="1">
+    <label for="married1">Yes  </label>
+    <input type="radio" id="married2" name="married" value="0">
+    <label for="married2">No</label><br>
+    <h4>What type of organization are you employed in?</h4>
+    <input type="radio" id="emp1" name="emp" value="0">
+    <label for="emp1">Private</label><br>
+    <input type="radio" id="emp3" name="emp" value="1">
+    <label for="emp3">Self Employed</label><br>
+    <input type="radio" id="emp2" name="emp" value="2">
+    <label for="emp2">Governmemt</label><br>
+    <input type="radio" id="emp4" name="emp" value="3">
+    <label for="emp4">Student</label><br>
+    <input type="radio" id="emp5" name="emp" value="4">
+    <label for="emp4">Unemployed</label><br>
+    <h4>Where do you live?</h4>
+    <input type="radio" id="loc2" name="loc1" value="0">
+    <label for="loc2">Urban</label><br>
+    <input type="radio" id="loc1" name="loc1" value="1">
+    <label for="loc1">Rural</label><br>
+    <h4>What is your average glucose/sugar level?</h4>
+    <input type="text" id="GluLevl" name="GluLevl">
+    <h4>Enter your calculated BMI</h4>
+    <h6>BMI=(weight in kg)/(square of your height in meters)</h6>
+    <input type="text" id="bmi" name="bmi">
+    <h4>Do you smoke?</h4>
+    <input type="radio" id="smoke1" name="smoke1" value="0">
+    <label for="smoke1">Formerly Smoked</label><br>
+    <input type="radio" id="smoke2" name="smoke1" value="1">
+    <label for="smoke2">Never Smoked</label><br>
+    <input type="radio" id="smoke3" name="smoke1" value="2">
+    <label for="smoke3">Smokes</label><br><br>
+    <input type="submit" value="SUBMIT" style="background-color: green;">
+</form>
+    
+    <br><br>
+    <section> <a name="about"></a></section>
+<div>
+  <h1 style="background-color:transparent;color: white;">ABOUT</h1>
+  <p style="color: black;background-color: #2E8BC0;font-size: 20px;"><strong> To the World Health Organization (WHO), stroke is the 2nd leading cause of death globally,
+     responsible for approximately
+     11% of total deaths. This dataset is used to predict whether a patient is likely to get stroke based on the input
+     parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information
+      about the patient.</strong></p>
+      <p style="color: black;background-color: #2E8BC0;font-size: 20px;"><strong>Using the <a href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset">
+        Stroke Prediction</a> dataset from Kaggle,
+        our team was able to use machine learning to get a 94.77% accuracy in predicting the chances of a person getting a stroke.
+          The factors taken into consideration from the datasets were age, gender: biological male & female,
+           having pre-existing hypertension, pre-existing heart disease, marriage status, work type, residence: urban or rural,
+            glucose level, BMI, and smoking status.<br>
+        We used models like Logistic Regression, Decision Tree, Random Forest & AdaBoost, K neighbors, and support vector machine 
+        to test the maximum accuracy we can achieve.</strong></p>
+        <p style="color: white;background-color: #2E8BC0;font-size: 20px;"><strong>To read more about what we found from the dataset, visit our <a href="https://medium.com/@dhairyagupta2603/stroke-risk-prediction-using-kaggle-75aad3e4d961">BLOG PAGE @MEDIUM!</a> </strong></p>
+</div>
+
+<style>
+  html {
+    box-sizing:border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <h2 style="color: white;">MEET THE TEAM!</h2>
+  
+  <br>
+  <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    </style>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="../static/images/Dinesh.jpeg" alt="Dinesh" style="width:49.5%">
+        <div class="container">
+          <h2>Dinesh D</h2>
+          <p class="title">Student at VIT Chennai</p>
+          <p><strong>dinesh15052003@gmail.com</strong></p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      </style>
+  
+    <div class="column">
+      <div class="card">
+        <img src="../static/images/kaavya.jpeg" alt="Kaavya" style="width:50%">
+        <div class="container">
+          <h2>Kaavya Jayakrishnan</h2>
+          <p class="title">Student at VIT Chennai</p>
+          <p><strong>jk.kaavya@gmail.com</strong></p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <style>
+          img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          </style>
+        <img src="../static/images/Dhairya.jpeg" alt="Dhairya" style="width:51%">
+        <div class="container">
+          <h2 style="font-size: 25px;">Dhairya Gupta</h2>
+          <p class="title">Student at VIT Chennai</p>
+       
+          <p><strong>dhairyagupta2603@gmail.com</strong></p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<form action="#MENU">
+    <input type="submit" value="Go to Home Page"/>
+</form>
+
+<form action="/website_source_code.html">
+    
+</form>
+
+<section>
+    <a name="feedback"></a>
+</section>
+<h1 style="background-color:transparent;width: fit-content;color: white;">Fill this out!Your feedback will help us predict better.</h1>
+</div>
+
+<style>    
+    * {    
+      box-sizing: border-box;    
+    }    
+        
+    input[type=text], select, textarea {    
+      width: 100%;    
+      padding: 12px;    
+      border: 1px solid rgb(70, 68, 68);    
+      border-radius: 4px;    
+      resize: vertical;    
+    }    
+    input[type=email], select, textarea {    
+      width: 100%;    
+      padding: 12px;    
+      border: 1px solid rgb(70, 68, 68);    
+      border-radius: 4px;    
+      resize: vertical;    
+    }    
+        
+    label {    
+      padding: 12px 12px 12px 0;    
+      display: inline-block;    
+    }    
+        
+    input[type=submit] {    
+      background-color: rgb(37, 116, 161);    
+      color: white;    
+      padding: 12px 20px;    
+      border: none;    
+      border-radius: 4px;    
+      cursor: pointer;    
+      float: right;    
+    }    
+        
+    input[type=submit]:hover {    
+      background-color: #45a049;    
+    }    
+        
+    .container {    
+      border-radius: 5px;    
+          
+      padding: 20px;    
+    }    
+        
+    .col-25 {    
+      float: left;    
+      width: 25%;    
+      margin-top: 6px;    
+    }    
+        
+    .col-75 {    
+      float: left;    
+      width: 75%;    
+      margin-top: 6px;    
+    }    
+        
+    /* Clear floats after the columns */    
+    .row:after {    
+      content: "";    
+      display: table;    
+      clear: both;    
+    }    
+        
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */    
+    </style>    
+    </head>    
+    <body>    
+       
+    <div class="container">    
+      <form>    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="fname">First Name</label>    
+          </div>    
+          <div class="col-75">    
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">    
+          </div>    
+        </div>    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="lname">Last Name</label>    
+          </div>    
+          <div class="col-75">    
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">    
+          </div>    
+        </div>    
+        <div class="row">    
+            <div class="col-25">    
+              <label for="email">Mail Id</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="email" id="email" name="mailid" placeholder="Your mail id..">    
+            </div>    
+          </div>    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="country">Country</label>    
+          </div>    
+          <div class="col-75">    
+            <select id="country" name="country">    
+                <option value="none">Select Country</option>    
+              <option value="australia">Australia</option>    
+              <option value="canada">Canada</option>    
+              <option value="usa">USA</option>    
+              <option value="russia">Russia</option>    
+              <option value="japan">Japan</option>    
+              <option value="india">India</option>    
+              <option value="china">China</option>    
+            </select>    
+          </div>    
+        </div>    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="feed_back">Feed Back</label>    
+          </div>    
+          <div class="col-75">    
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>    
+          </div>    
+        </div>    
+        <div class="row">    
+          <input type="submit" value="Submit">    
+        </div>    
+      </form>
+
+
+
+
+
+
+
+
+</body>
+        </html>
